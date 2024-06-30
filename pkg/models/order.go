@@ -14,6 +14,7 @@ type Status string
 const (
 	PROCESSING        Status = "processing"
 	PROCCESINGPAYMENT Status = "processing_payment"
+	SHIPPING          Status = "shipping"
 	COMPLETED         Status = "completed"
 	CANCELED          Status = "canceled"
 )
@@ -24,6 +25,8 @@ func NewStatus(status string) Status {
 		return PROCESSING
 	case "processing_payment":
 		return PROCCESINGPAYMENT
+	case "shipping":
+		return SHIPPING
 	case "completed":
 		return COMPLETED
 	case "canceled":
